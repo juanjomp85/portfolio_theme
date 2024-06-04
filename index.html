@@ -1,250 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Juan José Martínez Pérez</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Portafolio</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre mí</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="proyectoDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Proyectos</a
-              >
-              <div class="dropdown-menu" aria-labelledby="proyectoDropdown">
-                <a class="dropdown-item" href="#proyectos"
-                  >Prototipos avanzados</a
-                >
-                <a class="dropdown-item" href="#proyectos">Rediseño landing</a>
-                <a class="dropdown-item" href="#proyectos"
-                  >Nueva funcionalidad</a
-                >
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Portafolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="proyectoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+                        <div class="dropdown-menu" aria-labelledby="proyectoDropdown">
+                            <a class="dropdown-item" href="#proyectos">Prototipos avanzados</a>
+                            <a class="dropdown-item" href="#proyectos">Rediseño landing</a>
+                            <a class="dropdown-item" href="#proyectos">Nueva funcionalidad</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <section id="home" class="text-center p-5 bg-light">
-      <div class="container">
-        <h1 class="display-4">Bienvenido a mi portfolio</h1>
-        <p class="lead">Descubre mis proyectos y habilidades.</p>
-      </div>
+        <div class="container">
+            <h1 class="display-4">Bienvenido a mi portfolio</h1>
+            <p class="lead"><a href="#" class="btn-shine">Descubre mis proyectos y habilidades.</a></p>
+        </div>
+
     </section>
 
     <section id="about" class="text-center p-5">
-      <div class="container">
-        <h2>Sobre mí</h2>
-        <p>
-          Hola, mi nombre es Juan José. Soy desarrollador y diseñador de
-          soluciones digitales. Puedo construir tu web desde cero, o crear una
-          aplicación que se adapte a tus necesidades.
-        </p>
-      </div>
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Hola, mi nombre es Juan José. Soy desarrollador y diseñador de soluciones digitales. Puedo construir tu web desde cero, o crear una aplicación que se adapte a tus necesidades.</p>
+        </div>
     </section>
+	
+	<section>
+		<div class="portfolio-item">
+			<h2>Detalles</h2>
+		</div>
+		<div class="container_service portfolio-item">
+			<div class="service ux-ui">
+			  <h2>Diseñador UX/UI</h2>
+			  <p>Creo interfaces visualmente impactantes y amigables para el usuario que cautivan y comprometen a tu audiencia.</p>
+			</div>
+			<div class="service web-development">
+			  <h2>Desarrollo Web</h2>
+			  <p>Creo sitios web de fácil gestión usando WordPress. Desde blogs simples hasta complejas plataformas de comercio electrónico, puedo ayudarte a alcanzar tus objetivos en línea.</p>
+			</div>
+			<div class="service multiplatform-development">
+			  <h2>Desarrollo Multiplataforma</h2>
+			  <p>Adapto soluciones digitales, sencillas e intuitivas para una mejor organización y ejecución de tareas para tu negocio.</p>
+			</div>
+			<div class="service support">
+			  <h2>Soporte</h2>
+			  <p>Me aseguro de que tus soluciones digitales siempre funcionen sin problemas con el mantenimiento continuo, la resolución de problemas y las mejoras.</p>
+			</div>
+		</div>
+	</section>
 
-    <section>
-      <div class="portfolio-item">
-        <h2>Detalles</h2>
-      </div>
-      <div class="container_service portfolio-item">
-        <div class="service ux-ui">
-          <h2>Diseñador UX/UI</h2>
-          <p>
-            Creo interfaces visualmente impactantes y amigables para el usuario
-            que cautivan y comprometen a tu audiencia.
-          </p>
-        </div>
-        <div class="service web-development">
-          <h2>Desarrollo Web</h2>
-          <p>
-            Creo sitios web de fácil gestión usando WordPress. Desde blogs
-            simples hasta complejas plataformas de comercio electrónico, puedo
-            ayudarte a alcanzar tus objetivos en línea.
-          </p>
-        </div>
-        <div class="service multiplatform-development">
-          <h2>Desarrollo Multiplataforma</h2>
-          <p>
-            Adapto soluciones digitales, sencillas e intuitivas para una mejor
-            organización y ejecución de tareas para tu negocio.
-          </p>
-        </div>
-        <div class="service support">
-          <h2>Soporte</h2>
-          <p>
-            Me aseguro de que tus soluciones digitales siempre funcionen sin
-            problemas con el mantenimiento continuo, la resolución de problemas
-            y las mejoras.
-          </p>
-        </div>
-      </div>
-    </section>
+	<section id="proyectos" class="text-center p-5 bg-light portfolio-item">
+		<div class="container">
+			<h2>Proyectos</h2>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<video class="embed-responsive-item" autoplay loop muted>
+								<source src="https://modesign.es/wp-content/uploads/2024/04/Merge-videos-project.mp4" type="video/mp4">
+								Tu navegador no soporta la etiqueta de video.
+							</video>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Prototipos avanzados</h5>
+							<p class="card-text">Experiencias interactivas con interfaces de usuario elegantes y flujos intuitivos.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<video class="embed-responsive-item" autoplay loop muted>
+								<source src="https://modesign.es/wp-content/uploads/2024/04/2024-04-17-20-41-52.mp4" type="video/mp4">
+								Tu navegador no soporta la etiqueta de video.
+							</video>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Rediseño landing</h5>
+							<p class="card-text">Optimización del proceso de navegación y compra para una experiencia fluida.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<img src="assets/proyecto3.jpg" class="embed-responsive-item" alt="Nueva funcionalidad">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Nueva funcionalidad</h5>
+							<p class="card-text">Mejoras en la navegación y proceso de pago para una compra fácil y segura.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <section id="proyectos" class="text-center p-5 bg-light portfolio-item">
-      <div class="container">
-        <h2>Proyectos</h2>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
-              <div class="embed-responsive embed-responsive-16by9">
-                <video
-                  class="embed-responsive-item"
-                  controls
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source
-                    src="https://modesign.es/wp-content/uploads/2024/04/Merge-videos-project.mp4"
-                    type="video/mp4"
-                  />
-                  Tu navegador no soporta la etiqueta de video.
-                </video>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Prototipos avanzados</h5>
-                <p class="card-text">
-                  Experiencias interactivas con interfaces de usuario elegantes
-                  y flujos intuitivos.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
-              <div class="embed-responsive embed-responsive-16by9">
-                <video
-                  class="embed-responsive-item"
-                  controls
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source
-                    src="https://modesign.es/wp-content/uploads/2024/04/2024-04-17-20-41-52.mp4"
-                    type="video/mp4"
-                  />
-                  Tu navegador no soporta la etiqueta de video.
-                </video>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Rediseño landing</h5>
-                <p class="card-text">
-                  Optimización del proceso de navegación y compra para una
-                  experiencia fluida.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
-              <div class="embed-responsive embed-responsive-16by9">
-                <img
-                  src="assets/proyecto3.jpg"
-                  class="embed-responsive-item"
-                  alt="Nueva funcionalidad"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Nueva funcionalidad</h5>
-                <p class="card-text">
-                  Mejoras en la navegación y proceso de pago para una compra
-                  fácil y segura.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="contact" class="text-center p-5">
-      <div class="container">
-        <h2>Contacto</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="message">Mensaje:</label>
-            <textarea
-              class="form-control"
-              id="message"
-              name="message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-dark">Enviar</button>
-        </form>
-      </div>
+        <div class="container">
+            <h2>Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Enviar</button>
+            </form>
+        </div>
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
-      <p>
-        &copy; 2024 Juan José Martínez Pérez. Todos los derechos reservados.
-      </p>
+        <p>&copy; 2024 Juan José Martínez Pérez. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
