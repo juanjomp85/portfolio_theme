@@ -173,10 +173,10 @@ footer {
   animation: shine 3s infinite linear;
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
-  font-weight: 600;
+  /*font-weight: 600;*/
   font-size: 16px;
   text-decoration: none;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   font-family: "Poppins", sans-serif;
 }
 @-moz-keyframes shine {
