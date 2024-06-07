@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Juan José Martínez Pérez</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Portafolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="proyectoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+                        <div class="dropdown-menu" aria-labelledby="proyectoDropdown">
+                            <a class="dropdown-item" href="#proyectos">Prototipos avanzados</a>
+                            <a class="dropdown-item" href="#proyectos">Rediseño landing</a>
+                            <a class="dropdown-item" href="#proyectos">Nueva funcionalidad</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="text-center p-5 bg-light">
+        <div class="container">
+            <h1 class="display-4">Prototipos avanzados</h1>
+            <p class="lead"><a href="#" class="btn-shine">Diseños avanzados que cautivan.</a></p>
+        </div>
+
+    </section>
+
+	<section id="proyectos" class="text-center p-5 bg-light portfolio-item">
+  <div class="loader container_service">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <br>
+		<div class="container">
+			<h2>Proyectos</h2>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 text-decoration-none text-dark"> <!-- Enlace a la página del proyecto 1 -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.figma.com/proto/ZqVcGvOZXXJdjKIIXsAtbB/Juanjo?kind=proto&node-id=71-1461&page-id=70%3A1129&scaling=scale-down-width&starting-point-node-id=71%3A1461&t=JN21foMdiQkIHaoV-1&type=design&viewport=692%2C200%2C0.09" frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sfera</h5>
+                            <p class="card-text">Se ha creado un prototipo de la página de inicio para presentar la nueva colección de la tienda de ropa «Sfera». Esta página incluye una galería de imágenes de la nueva colección, que se muestra como un abanico desplegable. Los usuarios pueden interactuar con la galería desplazando con el ratón las imágenes hacia un lado.</p>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<video class="embed-responsive-item" autoplay loop muted>
+								<source src="https://modesign.es/wp-content/uploads/2024/04/2024-04-17-20-41-52.mp4" type="video/mp4">
+								Tu navegador no soporta la etiqueta de video.
+							</video>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Dunkin Donuts</h5>
+							<p class="card-text">Este prototipo está diseñado para capturar la atención del usuario y proporcionar una experiencia de usuario envolvente que destaque la calidad y el sabor único del producto ofrecido.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<img src="assets/proyecto3.jpg" class="embed-responsive-item" alt="Nueva funcionalidad">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Nasa</h5>
+							<p class="card-text">Este último prototipo ha sido meticulosamente diseñado para cautivar al usuario, brindándole una experiencia fluida y envolvente. Con una interfaz intuitiva y dinámica. Cada interacción está cuidadosamente diseñada para fomentar una participación activa y comprometida, asegurando que el usuario se sienta completamente inmerso en el contenido que la página tiene para ofrecer.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Juan José Martínez Pérez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

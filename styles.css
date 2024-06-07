@@ -9,6 +9,7 @@ header {
     background: #333;
     color: white;
     padding: 10px 0;
+    position: sticky;
 }
 
 header nav ul {
