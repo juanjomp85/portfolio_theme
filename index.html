@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Juan José Martínez Pérez</title>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -87,7 +89,7 @@
 		<div class="container">
 			<h2>Proyectos</h2>
 			<div class="row">
-				<div class="col-md-4 mb-4">
+				<div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="3000">
 					<a href="proyecto1.html" class="card h-100 text-decoration-none text-dark"> <!-- Enlace a la página del proyecto 1 -->
                         <div class="embed-responsive embed-responsive-16by9">
                             <video class="embed-responsive-item" autoplay loop muted>
@@ -101,7 +103,7 @@
                         </div>
                     </a>
 				</div>
-				<div class="col-md-4 mb-4">
+				<div class="col-md-4 mb-4" data-aos="fade-down" data-aos-duration="3000">
 					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="embed-responsive-item" autoplay loop muted>
@@ -115,7 +117,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mb-4">
+				<div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="3000">
 					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
 						<div class="embed-responsive embed-responsive-16by9">
 							<img src="assets/proyecto3.jpg" class="embed-responsive-item" alt="Nueva funcionalidad">
@@ -162,6 +164,12 @@
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Juan José Martínez Pérez. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
