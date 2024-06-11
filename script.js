@@ -13,16 +13,28 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $(window).scroll(function() {
+  // Función para animar elementos
+  function animateElements() {
       $('.portfolio-item').each(function(i) {
-          var top_of_object = $(this).position().top; //+ $(this).outerHeight();
+          var top_of_object = $(this).position().top;
           var bottom_of_window = $(window).scrollTop() + $(window).height();
 
           if (bottom_of_window > top_of_object) {
               $(this).animate({'opacity': '1'}, 500);
           }
       });
-  });
+  }
+
+  // Verificar si la página necesita scroll
+  if ($(document).height() <= $(window).height()) {
+      // Si no hay scroll necesario, animar elementos inmediatamente
+      animateElements();
+  } else {
+      // Si hay scroll necesario, animar elementos al hacer scroll
+      $(window).scroll(function() {
+          animateElements();
+      });
+  }
 });
 
 $(document).ready(function() {
