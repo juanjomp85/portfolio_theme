@@ -62,3 +62,30 @@ services.forEach((service, index) => {
   }, index * 300);
 });
 });
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var form = event.target;
+  var formData = new FormData(form);
+  
+  fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => {
+      if (response.ok) {
+          document.getElementById('form-response').innerHTML = '<p class="text-success">¡Mensaje enviado con éxito!</p>';
+          form.reset();
+      } else {
+          response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                  document.getElementById('form-response').innerHTML = '<p class="text-danger">Ocurrió un error al enviar el mensaje.</p>';
+              }
+          });
+      }
+  }).catch(error => {
+      document.getElementById('form-response').innerHTML = '<p class="text-danger">Ocurrió un error al enviar el mensaje.</p>';
+  });
+});
