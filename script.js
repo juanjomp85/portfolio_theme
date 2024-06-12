@@ -111,3 +111,17 @@ document.querySelector('contact-form').addEventListener('submit', function(event
         document.getElementById('form-response').innerHTML = '<p class="text-danger">Ocurrió un error al enviar el mensaje.</p>';
     });
 });
+
+// Reemplaza 'YOUR_API_KEY' con tu clave de API de OpenWeatherMap
+const apiKey = '94b951885a0e511b2ee3c0f4ec0ff996';
+const city = 'Murcia'; // Puedes cambiar la ciudad por la que prefieras
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('location').textContent = `Location: ${data.name}`;
+    document.getElementById('temperature').textContent = `Temperature: ${data.main.temp} °C`;
+    document.getElementById('description').textContent = `Weather: ${data.weather[0].description}`;
+  })
+  .catch(error => console.error('Error fetching the weather data:', error));

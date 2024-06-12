@@ -245,3 +245,12 @@ animation-delay: .5s;
   transform: scaleY(1);
 }
 }
+
+#weather {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#weather p {
+  font-size: 1.2em;
+}
