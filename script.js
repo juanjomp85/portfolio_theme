@@ -114,7 +114,7 @@ document.querySelector('contact-form').addEventListener('submit', function(event
 
 document.addEventListener('DOMContentLoaded', function () {
     // Reemplaza 'YOUR_API_KEY' con tu clave de API de OpenWeatherMap
-    const apiKey = '94b951885a0e511b2ee3c0f4ec0ff996';
+    const apiKey = 'YourAPIKey';
     const city = 'Murcia'; // Puedes cambiar la ciudad por la que prefieras
     const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
