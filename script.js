@@ -112,16 +112,30 @@ document.querySelector('contact-form').addEventListener('submit', function(event
     });
 });
 
-// Reemplaza 'YOUR_API_KEY' con tu clave de API de OpenWeatherMap
-const apiKey = '94b951885a0e511b2ee3c0f4ec0ff996';
-const city = 'Murcia'; // Puedes cambiar la ciudad por la que prefieras
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+document.addEventListener('DOMContentLoaded', function () {
+    // Reemplaza 'YOUR_API_KEY' con tu clave de API de OpenWeatherMap
+    const apiKey = '94b951885a0e511b2ee3c0f4ec0ff996';
+    const city = 'Murcia'; // Puedes cambiar la ciudad por la que prefieras
+    const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('location').textContent = `Location: ${data.name}`;
-    document.getElementById('temperature').textContent = `Temperature: ${data.main.temp} °C`;
-    document.getElementById('description').textContent = `Weather: ${data.weather[0].description}`;
-  })
-  .catch(error => console.error('Error fetching the weather data:', error));
+    fetch(geoApiUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data.length > 0) {
+          const { lat, lon } = data[0];
+          // Ahora usamos lat y lon para obtener el clima
+          const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+          return fetch(weatherApiUrl);
+        } else {
+          throw new Error('No se encontraron datos de geolocalización para la ciudad especificada.');
+        }
+      })
+      .then(response => response.json())
+      .then(weatherData => {
+        document.getElementById('location').innerHTML = `<p class="text-danger">Location: ${weatherData.name}</p>`;
+        document.getElementById('temperature').innerHTML = `<p class="text-danger">Temperature: ${weatherData.main.temp} °C</p>`;
+        document.getElementById('description').innerHTML = `<p class="text-danger">Weather: ${weatherData.weather[0].description}</p>`;
+      })
+      .catch(error => console.error('Error fetching the weather data:', error));
+  });
