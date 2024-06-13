@@ -63,33 +63,6 @@ services.forEach((service, index) => {
 });
 });
 
-/* document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  var form = event.target;
-  var formData = new FormData(form);
-  
-  fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-          'Accept': 'application/json'
-      }
-  }).then(response => {
-      if (response.ok) {
-          document.getElementById('form-response').innerHTML = '<p class="text-success">¡Mensaje enviado con éxito!</p>';
-          form.reset();
-      } else {
-          response.json().then(data => {
-              if (Object.hasOwn(data, 'errors')) {
-                  document.getElementById('form-response').innerHTML = '<p class="text-danger">Ocurrió un error al enviar el mensaje JSON.</p>';
-              }
-           });
-      }
-  }).catch(error => {
-      document.getElementById('form-response').innerHTML = '<p class="text-danger">Ocurrió un error al enviar el mensaje.</p>';
-  });
-}); */
-
 document.querySelector('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     var form = event.target;
@@ -112,9 +85,10 @@ document.querySelector('contact-form').addEventListener('submit', function(event
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     // Reemplaza 'YOUR_API_KEY' con tu clave de API de OpenWeatherMap
-    const apiKey = 'YourAPIKey';
+    const apiKey = 'd818be6dc772f3d4daa0db19f2287bff';
+    //moment.defineLocale(localeName, config)
     const city = 'Murcia'; // Puedes cambiar la ciudad por la que prefieras
     const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
@@ -138,4 +112,39 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('description').innerHTML = `<p class="text-danger">Weather: ${weatherData.weather[0].description}</p>`;
       })
       .catch(error => console.error('Error fetching the weather data:', error));
-  });
+  }); */
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const apiKey = 'd818be6dc772f3d4daa0db19f2287bff';
+    const city = 'Murcia';
+    const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+
+    fetch(geoApiUrl)
+      .then(response => {
+        console.log('Geo API Response:', response);
+        return response.json();
+      })
+      .then(data => {
+        console.log('Geo Data:', data);
+        if (data.length > 0) {
+          const { lat, lon } = data[0];
+          const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+          return fetch(weatherApiUrl);
+        } else {
+          throw new Error('No se encontraron datos de geolocalización para la ciudad especificada.');
+        }
+      })
+      .then(response => {
+        console.log('Weather API Response:', response);
+        return response.json();
+      })
+      .then(weatherData => {
+        console.log('Weather Data:', weatherData);
+        document.getElementById('location').innerHTML = `<p class="text-danger">Location: ${weatherData.name}</p>`;
+        document.getElementById('temperature').innerHTML = `<p class="text-danger">Temperature: ${weatherData.main.temp} °C</p>`;
+        document.getElementById('description').innerHTML = `<p class="text-danger">Weather: ${weatherData.weather[0].description}</p>`;
+      })
+      .catch(error => console.error('Error fetching the weather data:', error));
+});
+
