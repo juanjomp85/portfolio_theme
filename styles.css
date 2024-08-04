@@ -160,7 +160,7 @@ animation: shine 3s infinite linear;
 animation-fill-mode: forwards;
 -webkit-text-size-adjust: none;
 /* font-weight: 600; */
-font-size: 16px;
+font-size: 18px;
 text-decoration: none;
 /* white-space: nowrap; */
 font-family: "Poppins", sans-serif;
@@ -170,41 +170,32 @@ font-family: "Poppins", sans-serif;
 0% {
   background-position: 0;
 }
-60% {
-  background-position: 180px;
-}
 100% {
   background-position: 300px;
 }
 }
+
 @-webkit-keyframes shine {
 0% {
   background-position: 0;
 }
-60% {
-  background-position: 180px;
-}
 100% {
   background-position: 300px;
 }
 }
+
 @-o-keyframes shine {
 0% {
   background-position: 0;
 }
-60% {
-  background-position: 180px;
-}
 100% {
   background-position: 300px;
 }
 }
+
 @keyframes shine {
 0% {
   background-position: 0;
-}
-60% {
-  background-position: 180px;
 }
 100% {
   background-position: 300px;
