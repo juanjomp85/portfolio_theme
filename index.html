@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Juan José Martínez Pérez</title>
+    <title>Portfolio de Juan José Martínez Pérez</title>
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Portafolio</a>
+            <a class="navbar-brand" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,6 +47,9 @@
             <h2>Sobre mí</h2>
             <p>Hola, mi nombre es Juan José. Soy desarrollador y diseñador de soluciones digitales. Puedo construir tu web desde cero, o crear una aplicación que se adapte a tus necesidades.</p>
         </div>
+		<a href="https://drive.google.com/file/d/14V-TVQ9LMJcoM1ldMmxK8_ZRPP-BCIc2/view?usp=drive_link">
+			<button> CV </button>
+		</a>
     </section>
 
     <div class="loader container_service">
@@ -56,13 +59,13 @@
     </div>
 	
 	<section>
-		<div class="portfolio-item">
+		<div >
 			<h2>Detalles</h2>
 		</div>
-		<div class="container_service portfolio-item">
+		<div class="container_service">
 			<div class="service ux-ui">
 			  <h2>Diseñador UX/UI</h2>
-			  <p>Creo interfaces visualmente impactantes y amigables para el usuario que cautivan y comprometen a tu audiencia.</p>
+			  <p>Diseño y desarrollo interfaces visualmente impactantes, intuitivas y amigables para el usuario, que no solo cautivan sino que también comprometen y conectan profundamente con tu audiencia.</p>
 			</div>
 			<div class="service web-development">
 			  <h2>Desarrollo Web</h2>
@@ -70,11 +73,11 @@
 			</div>
 			<div class="service multiplatform-development">
 			  <h2>Desarrollo Multiplataforma</h2>
-			  <p>Adapto soluciones digitales, sencillas e intuitivas para una mejor organización y ejecución de tareas para tu negocio.</p>
+			  <p>Adapto soluciones digitales innovadoras, sencillas e intuitivas, para garantizar una mejor organización, eficiencia y ejecución de tareas clave para tu negocio.</p>
 			</div>
 			<div class="service support">
 			  <h2>Soporte</h2>
-			  <p>Me aseguro de que tus soluciones digitales siempre funcionen sin problemas con el mantenimiento continuo, la resolución de problemas y las mejoras.</p>
+			  <p>Me aseguro de que tus soluciones digitales siempre funcionen sin problemas, brindando mantenimiento continuo, resolución efectiva de problemas, y aplicando mejoras constantes para optimizar su rendimiento.</p>
 			</div>
 		</div>
 	</section>
@@ -88,8 +91,9 @@
   <br>
 		<div class="container">
 			<h2>Proyectos</h2>
+			<br>
 			<div class="row">
-				<div class="col-md-4 mb-4" data-aos="zoom-out-right" data-aos-duration="3000">
+				<div class="col-md-4 mb-4" data-aos="zoom-out-right" data-aos-duration="2000">
 					<a href="proyecto1.html" class="card h-100 text-decoration-none text-dark"> <!-- Enlace a la página del proyecto 1 -->
                         <div class="embed-responsive embed-responsive-16by9">
                             <video class="embed-responsive-item" autoplay loop muted>
@@ -103,7 +107,7 @@
                         </div>
                     </a>
 				</div>
-				<div class="col-md-4 mb-4" data-aos="zoom-out-up" data-aos-duration="3000">
+				<div class="col-md-4 mb-4" data-aos="zoom-out-up" data-aos-duration="2000">
 					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="embed-responsive-item" autoplay loop muted>
@@ -117,7 +121,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 mb-4" data-aos="zoom-out-left" data-aos-duration="3000">
+				<div class="col-md-4 mb-4" data-aos="zoom-out-left" data-aos-duration="2000">
 					<div class="card h-100"> <!-- Añadir la clase h-100 para que todas las cards tengan la misma altura -->
 						<div class="embed-responsive embed-responsive-16by9">
 							<img src="assets/proyecto3.jpg" class="embed-responsive-item" alt="Nueva funcionalidad">
@@ -129,6 +133,9 @@
 					</div>
 				</div>
 			</div>
+			<a href="https://drive.google.com/drive/folders/1Db0pefl0Dq7-ENca9Bc7fUawWORWC4GU?usp=sharing">
+				<button id="button-certify"> Certificados </button>
+			</a>
 		</div>
 	</section>
 
@@ -170,8 +177,13 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
-    </script>
+	   AOS.init({
+		  disable: function() {
+			 return window.innerWidth < 768;
+		  }
+	   });
+	</script>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
